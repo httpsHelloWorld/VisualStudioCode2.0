@@ -17,12 +17,12 @@ module.exports = () => {
     plugins: [
       // TODO: Add and configure workbox plugins for a service worker and manifest file.
       new HtmlWebpackPlugin({
-        template:'/index.html',
+        template:'./index.html',
         title:'JATE'
       }),
 
       new InjectManifest({
-        swSrc:'/src-sw.js',
+        swSrc:'./src-sw.js',
         swDest:'src-sw.js'
       }),
 
@@ -33,11 +33,11 @@ module.exports = () => {
         short_name:'JATE',
         description:'Progressive Web Applications (PWA) Challenge: Text Editor',
         background_color:'#36B1E4',
-        theme_color:'36B1E4',
+        theme_color:'#36B1E4',
         start_url:'/',
         publicPath:'/',
         icons:[{
-          src:path.resolve('/src/images/logo.png'),
+          src:path.resolve('src/images/logo.png'),
           sizes:[72,96,128,144,152,192,384,512],
           destination:path.join('assets','icons')
         }]
